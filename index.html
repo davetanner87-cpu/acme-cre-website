@@ -156,6 +156,18 @@
       <div class="team-grid">
 
         <div class="team-card">
+          <div class="team-photo">[ Headshot — David Nadler ]</div>
+          <div class="team-info">
+            <h3>David Nadler</h3>
+            <p class="title">Principal</p>
+            <p>Bio coming soon — extensive background in commercial property transactions across Utah.</p>
+            <div class="team-contact">
+              <div><a href="mailto:info@acme-cre.com">info@acme-cre.com</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
           <div class="team-photo">[ Headshot — Tim Anker ]</div>
           <div class="team-info">
             <h3>Tim Anker</h3>
@@ -164,18 +176,6 @@
             <div class="team-contact">
               <div><a href="tel:4356555661">435.655.5661</a></div>
               <div><a href="mailto:tanker@acme-cre.com">tanker@acme-cre.com</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <div class="team-photo">[ Headshot — David Nadler ]</div>
-          <div class="team-info">
-            <h3>David Nadler</h3>
-            <p class="title">Principal</p>
-            <p>Bio coming soon — extensive background in commercial property transactions across Utah.</p>
-            <div class="team-contact">
-              <div><a href="mailto:info@acme-cre.com">info@acme-cre.com</a></div>
             </div>
           </div>
         </div>
@@ -240,12 +240,10 @@
   </footer>
 
   <script>
-    // ── LISTINGS DATA (will be replaced by listings.json from LoopNet sync)
-    const LISTINGS = [
-      { id: 'class-a-office', type: 'For Lease', title: 'Class A Office Space', address: 'Park City, UT 84098', size: '2,500 SF', price: 'TBD/SF', category: 'Office' },
-      { id: 'retail-mixed-use', type: 'For Sale', title: 'Retail / Mixed Use', address: 'Park City, UT 84060', size: '4,800 SF', price: 'Contact', category: 'Retail' },
-      { id: 'industrial-flex', type: 'Build to Suit', title: 'Industrial / Flex Space', address: 'Kimball Junction, UT', size: 'Flexible', price: 'TBD', category: 'Industrial' },
-    ];
+    // ── LISTINGS — loaded dynamically from listings.json
+    // To update listings: edit listings.json (or run loopnet-sync/sync.js)
+
+    let LISTINGS = [];
 
     const PER_PAGE = 9;
     let currentFilter = 'all';
@@ -273,21 +271,30 @@
 
       countEl.textContent = `${total} propert${total === 1 ? 'y' : 'ies'}`;
 
-      grid.innerHTML = items.map(l => `
-        <a href="listing.html?id=${l.id}" class="listing-card" data-type="${l.type}" style="text-decoration:none; color:inherit; display:block;">
-          <div class="listing-img">[ Photo Coming Soon ]</div>
-          <span class="listing-tag">${l.type}</span>
-          <div class="listing-body">
-            <h3>${l.title}</h3>
-            <p class="address">${l.address}</p>
-            <div class="listing-details">
-              <div>Size<br><span>${l.size}</span></div>
-              <div>${l.type === 'For Sale' ? 'Price' : 'Rate'}<br><span>${l.price}</span></div>
-              <div>Type<br><span>${l.category}</span></div>
-            </div>
-          </div>
-        </a>
-      `).join('');
+      if (items.length === 0) {
+        grid.innerHTML = '<p style="color:var(--dark-gray); font-size:15px;">No listings found in this category.</p>';
+      } else {
+        grid.innerHTML = items.map(l => {
+          const imgHtml = l.photoUrl
+            ? `<img src="${l.photoUrl}" alt="${l.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.parentElement.innerHTML='[ Photo Coming Soon ]'">`
+            : '[ Photo Coming Soon ]';
+          const tagColor = l.type === 'For Sale' ? '#676767' : '#F47D4C';
+          return `
+            <a href="listing.html?id=${l.id}" class="listing-card" data-type="${l.type}" style="text-decoration:none; color:inherit; display:block;">
+              <div class="listing-img">${imgHtml}</div>
+              <span class="listing-tag" style="background:${tagColor}">${l.type}</span>
+              <div class="listing-body">
+                <h3>${l.title}</h3>
+                <p class="address">${l.address}</p>
+                <div class="listing-details">
+                  <div>Size<br><span>${l.size}</span></div>
+                  <div>${l.type === 'For Sale' ? 'Price' : 'Rate'}<br><span>${l.price}</span></div>
+                  <div>Type<br><span>${l.category}</span></div>
+                </div>
+              </div>
+            </a>`;
+        }).join('');
+      }
 
       if (showingAll || totalPages <= 1) {
         prevBtn.style.display = 'none';
@@ -331,8 +338,21 @@
       renderListings();
     }
 
-    // Init
-    renderListings();
+    // ── Bootstrap: fetch listings from listings.json
+    (async function loadListings() {
+      const grid = document.getElementById('listings-grid');
+      grid.innerHTML = '<p style="color:var(--dark-gray); font-size:15px; padding:16px 0;">Loading listings…</p>';
+      try {
+        const res = await fetch('listings.json?v=' + Date.now());
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        LISTINGS = (data.listings || []).filter(l => l.status === 'active');
+      } catch (err) {
+        console.warn('Could not load listings.json — using empty list.', err);
+        LISTINGS = [];
+      }
+      renderListings();
+    })();
 
     function handleSubmit(e) {
       e.preventDefault();
