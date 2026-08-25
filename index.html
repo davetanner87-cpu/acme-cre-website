@@ -340,8 +340,8 @@
       e.target.reset();
     }
 
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
+    // Smooth scroll for nav links only (not listing cards)
+    document.querySelectorAll('nav a[href^="#"], a.btn-primary[href^="#"], a.btn-secondary[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
