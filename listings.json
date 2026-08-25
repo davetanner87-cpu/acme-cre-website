@@ -319,25 +319,5 @@
     "description": "Test listing",
     "photoUrl": "",
     "status": "active"
-  },
-  {
-    "id": "999-test-blvd-park-city-ut-84098-mt96win1",
-    "type": "For Lease",
-    "category": "Office",
-    "title": "Wile E. Test Suite",
-    "address": "999 Test Blvd, Park City, UT 84098",
-    "size": "1,000 SF",
-    "price": "/SF NNN",
-    "available": "Now",
-    "status": "active",
-    "description": "Test listing added by manage-listings.js during setup. Safe to remove.",
-    "features": [],
-    "spaces": [],
-    "photoUrl": "",
-    "photos": [],
-    "flyerUrl": null,
-    "broker": "Tim Anker",
-    "brokerEmail": "tanker@acme-cre.com",
-    "brokerPhone": "435-655-5661"
   }
 ]
