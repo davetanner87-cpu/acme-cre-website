@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Listing — ACME Commercial Real Estate</title>
+  <meta name="description" id="page-desc" content="Commercial property listing from ACME Commercial Real Estate, Park City, Utah.">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .listing-hero {
+      margin-top: 140px;
+      background: var(--black);
+      min-height: 480px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .listing-hero-img {
+      position: absolute;
+      inset: 0;
+      background: var(--light-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+    }
+
+    .listing-hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
+    .listing-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    }
+
+    .listing-hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 48px;
+      width: 100%;
+    }
+
+    .listing-hero-content .listing-tag {
+      margin: 0 0 16px;
+      display: inline-block;
+    }
+
+    .listing-hero-content h1 {
+      font-size: clamp(32px, 5vw, 64px);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -1px;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .listing-hero-content .hero-address {
+      font-size: 18px;
+      color: var(--light-gray);
+      font-weight: 300;
+    }
+
+    /* Detail layout */
+    .listing-body-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 48px;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* Stats bar */
+    .listing-stats {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--light-gray);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+
+    .listing-stat {
+      flex: 1;
+      padding: 24px;
+      border-right: 1px solid var(--light-gray);
+      text-align: center;
+    }
+
+    .listing-stat:last-child { border-right: none; }
+
+    .listing-stat .label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+      margin-bottom: 8px;
+    }
+
+    .listing-stat .value {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.5px;
+    }
+
+    /* Description */
+    .listing-description h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    .listing-description p {
+      font-size: 16px;
+      color: var(--dark-gray);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .listing-features h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+
+    .listing-features ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .listing-features ul li {
+      font-size: 14px;
+      color: var(--dark-gray);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .listing-features ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    /* Sidebar */
+    .listing-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-card {
+      border: 1px solid var(--light-gray);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .sidebar-card-header {
+      background: var(--black);
+      padding: 20px 24px;
+    }
+
+    .sidebar-card-header h3 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .sidebar-card-body { padding: 24px; }
+
+    .agent-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .agent-photo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--light-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--dark-gray);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .agent-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .agent-details h4 { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+    .agent-details .agent-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); }
+
+    .contact-links { display: flex; flex-direction: column; gap: 10px; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--dark-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover { color: var(--orange); }
+
+    .contact-link .icon {
+      width: 32px;
+      height: 32px;
+      background: #f8f8f8;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* Inquiry form */
+    .inquiry-form { display: flex; flex-direction: column; gap: 12px; }
+
+    .inquiry-form input,
+    .inquiry-form textarea {
+      background: #f8f8f8;
+      border: 1px solid var(--light-gray);
+      color: var(--black);
+      padding: 12px 16px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .inquiry-form input:focus,
+    .inquiry-form textarea:focus { border-color: var(--orange); }
+
+    .inquiry-form textarea { height: 100px; resize: vertical; }
+
+    .inquiry-form button {
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .inquiry-form button:hover { background: #e06535; }
+
+    /* Flyer download */
+    .flyer-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--orange);
+      color: var(--orange);
+      background: transparent;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-bottom: 24px;
+    }
+
+    .flyer-btn:hover { background: var(--orange); color: var(--white); }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--dark-gray);
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--orange); }
+
+    @media (max-width: 900px) {
+      .listing-body-wrap { grid-template-columns: 1fr; gap: 40px; }
+      .listing-sidebar { position: static; }
+      .listing-hero-content { padding: 32px 24px; }
+      .listing-stats { flex-wrap: wrap; }
+      .listing-stat { min-width: 50%; }
+      .listing-features ul { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img id="nav-logo-img" src="images/acme-logo.png" alt="ACME Commercial" style="height:120px; width:auto; display:block; transition: height 0.3s ease;">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#listings">Listings</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- LISTING HERO -->
+  <div class="listing-hero">
+    <div class="listing-hero-img" id="hero-img">[ Property Photo ]</div>
+    <div class="listing-hero-overlay"></div>
+    <div class="listing-hero-content">
+      <span class="listing-tag" id="hero-tag">For Lease</span>
+      <h1 id="hero-title">Property Title</h1>
+      <p class="hero-address" id="hero-address">Address, Park City, UT</p>
+    </div>
+  </div>
+
+  <!-- LISTING BODY -->
+  <div class="listing-body-wrap">
+
+    <!-- Main Content -->
+    <div>
+      <a href="index.html#listings" class="back-link">← Back to Listings</a>
+
+      <!-- Stats -->
+      <div class="listing-stats">
+        <div class="listing-stat">
+          <div class="label">Size</div>
+          <div class="value" id="stat-size">—</div>
+        </div>
+        <div class="listing-stat">
+          <div class="label">Rate / Price</div>
+          <div class="value" id="stat-price">—</div>
+        </div>
+        <div class="listing-stat">
+          <div class="label">Type</div>
+          <div class="value" id="stat-type">—</div>
+        </div>
+        <div class="listing-stat">
+          <div class="label">Available</div>
+          <div class="value" id="stat-available">Now</div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="listing-description">
+        <h2>Property Overview</h2>
+        <p id="listing-desc">Property description will appear here, auto-populated from LoopNet listing data.</p>
+      </div>
+
+      <!-- Features -->
+      <div class="listing-features" style="margin-top:40px;">
+        <h3>Property Features</h3>
+        <ul id="features-list">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+          <li>Feature 4</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="listing-sidebar">
+
+      <!-- Flyer Download -->
+      <a href="#" class="flyer-btn" id="flyer-link">
+        ↓ Download Property Flyer
+      </a>
+
+      <!-- Agent Card -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">
+          <h3>Listed By</h3>
+        </div>
+        <div class="sidebar-card-body">
+          <div class="agent-info">
+            <div class="agent-photo">[ Photo ]</div>
+            <div class="agent-details">
+              <h4>Tim Anker</h4>
+              <p class="agent-title">Principal Broker</p>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a href="tel:4356555661" class="contact-link">
+              <span class="icon">📞</span>
+              435.655.5661
+            </a>
+            <a href="mailto:tanker@acme-cre.com" class="contact-link">
+              <span class="icon">✉️</span>
+              tanker@acme-cre.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inquiry Form -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">
+          <h3>Schedule a Tour</h3>
+        </div>
+        <div class="sidebar-card-body">
+          <form class="inquiry-form" onsubmit="handleInquiry(event)">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone Number" />
+            <textarea placeholder="Questions or comments..."></textarea>
+            <button type="submit">Request a Tour</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <div class="acme">acme</div>
+      <div class="commercial">commercial</div>
+    </div>
+    <p>© 2026 ACME Commercial Real Estate · Park City, Utah · <a href="mailto:tanker@acme-cre.com">tanker@acme-cre.com</a></p>
+  </footer>
+
+  <script>
+    // Load listing data from URL params (e.g. listing.html?id=class-a-office)
+    // When LoopNet sync is live, this pulls from listings.json by ID
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    // Placeholder — will be replaced by fetch from listings.json
+    const LISTINGS = {
+      'class-a-office': {
+        type: 'For Lease',
+        title: 'Class A Office Space',
+        address: 'Park City, UT 84098',
+        size: '2,500 SF',
+        price: 'TBD/SF',
+        category: 'Office',
+        available: 'Now',
+        description: 'Premium Class A office space in the heart of Park City. Modern finishes, abundant natural light, and flexible floor plan options available. Ideal for professional services, financial, or technology firms seeking a prestigious Park City address.',
+        features: ['Modern finishes', 'Abundant natural light', 'Flexible floor plan', 'Ample parking', 'High-speed fiber', 'Conference rooms', 'Mountain views', 'ADA compliant']
+      },
+      'retail-mixed-use': {
+        type: 'For Sale',
+        title: 'Retail / Mixed Use',
+        address: 'Park City, UT 84060',
+        size: '4,800 SF',
+        price: 'Contact',
+        category: 'Retail',
+        available: 'Now',
+        description: 'Prime retail and mixed-use opportunity in a high-traffic Park City location. Ground floor retail with residential or office above. Exceptional visibility and foot traffic year-round.',
+        features: ['High foot traffic', 'Mixed use zoning', 'Ground floor retail', 'Strong visibility', 'Year-round traffic', 'Near Main Street', 'Turnkey opportunity', 'Investment grade']
+      },
+      'industrial-flex': {
+        type: 'Build to Suit',
+        title: 'Industrial / Flex Space',
+        address: 'Kimball Junction, UT',
+        size: 'Flexible',
+        price: 'TBD',
+        category: 'Industrial',
+        available: 'TBD',
+        description: 'Build-to-suit industrial and flex space opportunity at Kimball Junction. Flexible sizing from 5,000 to 50,000 SF. Ideal for distribution, light manufacturing, or flex office/warehouse configurations.',
+        features: ['Flexible sizing', 'Build to suit', 'Grade level doors', 'Clear height 24\'', 'Heavy power available', 'Easy I-80 access', 'Ample truck court', 'Office buildout available']
+      }
+    };
+
+    const listing = LISTINGS[id] || LISTINGS['class-a-office'];
+
+    // Populate page
+    document.title = `${listing.title} — ACME Commercial Real Estate`;
+    document.getElementById('page-desc').content = `${listing.type} — ${listing.size} — ${listing.address}`;
+    document.getElementById('hero-tag').textContent = listing.type;
+    document.getElementById('hero-tag').style.background = listing.type === 'For Sale' ? '#676767' : '#F47D4C';
+    document.getElementById('hero-title').textContent = listing.title;
+    document.getElementById('hero-address').textContent = listing.address;
+    document.getElementById('stat-size').textContent = listing.size;
+    document.getElementById('stat-price').textContent = listing.price;
+    document.getElementById('stat-type').textContent = listing.category;
+    document.getElementById('stat-available').textContent = listing.available;
+    document.getElementById('listing-desc').textContent = listing.description;
+    document.getElementById('page-title').textContent = `${listing.title} — ACME Commercial Real Estate`;
+
+    // Features
+    const featuresList = document.getElementById('features-list');
+    featuresList.innerHTML = listing.features.map(f => `<li>${f}</li>`).join('');
+
+    // Flyer link (will point to auto-generated PDF when LoopNet sync is live)
+    document.getElementById('flyer-link').href = `flyers/${id || 'listing'}.pdf`;
+
+    function handleInquiry(e) {
+      e.preventDefault();
+      alert('Thank you! Tim will be in touch shortly.');
+      e.target.reset();
+    }
+
+    // Shrinking nav on scroll
+    const nav = document.querySelector('nav');
+    const logoImg = document.getElementById('nav-logo-img');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+        logoImg.style.height = '52px';
+      } else {
+        nav.classList.remove('scrolled');
+        logoImg.style.height = '120px';
+      }
+    });
+  </script>
+
+</body>
+</html>

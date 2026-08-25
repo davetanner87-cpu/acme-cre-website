@@ -242,9 +242,9 @@
   <script>
     // ── LISTINGS DATA (will be replaced by listings.json from LoopNet sync)
     const LISTINGS = [
-      { type: 'For Lease', title: 'Class A Office Space', address: 'Park City, UT 84098', size: '2,500 SF', price: 'TBD/SF', category: 'Office' },
-      { type: 'For Sale', title: 'Retail / Mixed Use', address: 'Park City, UT 84060', size: '4,800 SF', price: 'Contact', category: 'Retail' },
-      { type: 'Build to Suit', title: 'Industrial / Flex Space', address: 'Kimball Junction, UT', size: 'Flexible', price: 'TBD', category: 'Industrial' },
+      { id: 'class-a-office', type: 'For Lease', title: 'Class A Office Space', address: 'Park City, UT 84098', size: '2,500 SF', price: 'TBD/SF', category: 'Office' },
+      { id: 'retail-mixed-use', type: 'For Sale', title: 'Retail / Mixed Use', address: 'Park City, UT 84060', size: '4,800 SF', price: 'Contact', category: 'Retail' },
+      { id: 'industrial-flex', type: 'Build to Suit', title: 'Industrial / Flex Space', address: 'Kimball Junction, UT', size: 'Flexible', price: 'TBD', category: 'Industrial' },
     ];
 
     const PER_PAGE = 9;
@@ -274,7 +274,7 @@
       countEl.textContent = `${total} propert${total === 1 ? 'y' : 'ies'}`;
 
       grid.innerHTML = items.map(l => `
-        <div class="listing-card" data-type="${l.type}">
+        <a href="listing.html?id=${l.id}" class="listing-card" data-type="${l.type}" style="text-decoration:none; color:inherit; display:block;">
           <div class="listing-img">[ Photo Coming Soon ]</div>
           <span class="listing-tag">${l.type}</span>
           <div class="listing-body">
@@ -286,7 +286,7 @@
               <div>Type<br><span>${l.category}</span></div>
             </div>
           </div>
-        </div>
+        </a>
       `).join('');
 
       if (showingAll || totalPages <= 1) {
