@@ -35,7 +35,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
-  height: 108px;
+  height: 140px;
   transition: height 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -100,7 +100,7 @@ nav.scrolled {
 
 /* ─── HERO ─── */
 #hero {
-  margin-top: 108px;
+  margin-top: 140px;
   min-height: 90vh;
   background: var(--black);
   display: flex;
