@@ -117,57 +117,33 @@
 
   <!-- LISTINGS -->
   <section id="listings" style="padding: 96px 48px;">
-    <div class="listings-header" style="max-width:1200px; margin:0 auto 48px;">
+    <div class="listings-header" style="max-width:1200px; margin:0 auto 32px;">
       <div>
         <p class="section-eyebrow">Available Properties</p>
         <h2 class="section-title">Current Listings</h2>
       </div>
       <a href="#contact" class="btn-primary" style="white-space:nowrap;">Request Full List</a>
     </div>
-    <div class="listings-grid" style="max-width:1200px; margin:0 auto;">
 
-      <div class="listing-card">
-        <div class="listing-img">[ Photo Coming Soon ]</div>
-        <span class="listing-tag">For Lease</span>
-        <div class="listing-body">
-          <h3>Class A Office Space</h3>
-          <p class="address">Park City, UT 84098</p>
-          <div class="listing-details">
-            <div>Size<br><span>2,500 SF</span></div>
-            <div>Rate<br><span>TBD/SF</span></div>
-            <div>Type<br><span>Office</span></div>
-          </div>
-        </div>
-      </div>
+    <!-- Filters -->
+    <div style="max-width:1200px; margin:0 auto 36px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+      <button class="filter-btn active" data-filter="all" onclick="filterListings('all')">All</button>
+      <button class="filter-btn" data-filter="For Lease" onclick="filterListings('For Lease')">For Lease</button>
+      <button class="filter-btn" data-filter="For Sale" onclick="filterListings('For Sale')">For Sale</button>
+      <button class="filter-btn" data-filter="Build to Suit" onclick="filterListings('Build to Suit')">Build to Suit</button>
+      <div style="flex:1;"></div>
+      <span id="listing-count" style="font-size:13px; color:#676767;"></span>
+    </div>
 
-      <div class="listing-card">
-        <div class="listing-img">[ Photo Coming Soon ]</div>
-        <span class="listing-tag">For Sale</span>
-        <div class="listing-body">
-          <h3>Retail / Mixed Use</h3>
-          <p class="address">Park City, UT 84060</p>
-          <div class="listing-details">
-            <div>Size<br><span>4,800 SF</span></div>
-            <div>Price<br><span>Contact</span></div>
-            <div>Type<br><span>Retail</span></div>
-          </div>
-        </div>
-      </div>
+    <div class="listings-grid" id="listings-grid" style="max-width:1200px; margin:0 auto;"></div>
 
-      <div class="listing-card">
-        <div class="listing-img">[ Photo Coming Soon ]</div>
-        <span class="listing-tag">Build to Suit</span>
-        <div class="listing-body">
-          <h3>Industrial / Flex Space</h3>
-          <p class="address">Kimball Junction, UT</p>
-          <div class="listing-details">
-            <div>Size<br><span>Flexible</span></div>
-            <div>Rate<br><span>TBD</span></div>
-            <div>Type<br><span>Industrial</span></div>
-          </div>
-        </div>
-      </div>
-
+    <!-- Pagination controls -->
+    <div style="max-width:1200px; margin:32px auto 0; display:flex; justify-content:center; gap:12px; align-items:center;">
+      <button id="btn-prev" class="filter-btn" onclick="changePage(-1)" style="display:none;">← Prev</button>
+      <span id="page-info" style="font-size:13px; color:#676767;"></span>
+      <button id="btn-next" class="filter-btn" onclick="changePage(1)" style="display:none;">Next →</button>
+      <button id="btn-view-all" class="filter-btn" onclick="viewAll()" style="display:none;">View All</button>
+      <button id="btn-paginate" class="filter-btn" onclick="paginate()" style="display:none;">Show Pages</button>
     </div>
   </section>
 
@@ -264,6 +240,100 @@
   </footer>
 
   <script>
+    // ── LISTINGS DATA (will be replaced by listings.json from LoopNet sync)
+    const LISTINGS = [
+      { type: 'For Lease', title: 'Class A Office Space', address: 'Park City, UT 84098', size: '2,500 SF', price: 'TBD/SF', category: 'Office' },
+      { type: 'For Sale', title: 'Retail / Mixed Use', address: 'Park City, UT 84060', size: '4,800 SF', price: 'Contact', category: 'Retail' },
+      { type: 'Build to Suit', title: 'Industrial / Flex Space', address: 'Kimball Junction, UT', size: 'Flexible', price: 'TBD', category: 'Industrial' },
+    ];
+
+    const PER_PAGE = 9;
+    let currentFilter = 'all';
+    let currentPage = 1;
+    let showingAll = false;
+
+    function getFiltered() {
+      if (currentFilter === 'all') return LISTINGS;
+      return LISTINGS.filter(l => l.type === currentFilter);
+    }
+
+    function renderListings() {
+      const filtered = getFiltered();
+      const total = filtered.length;
+      const totalPages = Math.ceil(total / PER_PAGE);
+      const grid = document.getElementById('listings-grid');
+      const countEl = document.getElementById('listing-count');
+      const prevBtn = document.getElementById('btn-prev');
+      const nextBtn = document.getElementById('btn-next');
+      const pageInfo = document.getElementById('page-info');
+      const viewAllBtn = document.getElementById('btn-view-all');
+      const paginateBtn = document.getElementById('btn-paginate');
+
+      const items = showingAll ? filtered : filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+
+      countEl.textContent = `${total} propert${total === 1 ? 'y' : 'ies'}`;
+
+      grid.innerHTML = items.map(l => `
+        <div class="listing-card" data-type="${l.type}">
+          <div class="listing-img">[ Photo Coming Soon ]</div>
+          <span class="listing-tag">${l.type}</span>
+          <div class="listing-body">
+            <h3>${l.title}</h3>
+            <p class="address">${l.address}</p>
+            <div class="listing-details">
+              <div>Size<br><span>${l.size}</span></div>
+              <div>${l.type === 'For Sale' ? 'Price' : 'Rate'}<br><span>${l.price}</span></div>
+              <div>Type<br><span>${l.category}</span></div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      if (showingAll || totalPages <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+        pageInfo.textContent = showingAll ? `Showing all ${total}` : '';
+        viewAllBtn.style.display = 'none';
+        paginateBtn.style.display = total > PER_PAGE && showingAll ? 'inline-block' : 'none';
+      } else {
+        prevBtn.style.display = currentPage > 1 ? 'inline-block' : 'none';
+        nextBtn.style.display = currentPage < totalPages ? 'inline-block' : 'none';
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        viewAllBtn.style.display = total > PER_PAGE ? 'inline-block' : 'none';
+        paginateBtn.style.display = 'none';
+      }
+    }
+
+    function filterListings(filter) {
+      currentFilter = filter;
+      currentPage = 1;
+      showingAll = false;
+      document.querySelectorAll('.filter-btn[data-filter]').forEach(b => {
+        b.classList.toggle('active', b.dataset.filter === filter);
+      });
+      renderListings();
+    }
+
+    function changePage(dir) {
+      currentPage += dir;
+      renderListings();
+      document.getElementById('listings').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function viewAll() {
+      showingAll = true;
+      renderListings();
+    }
+
+    function paginate() {
+      showingAll = false;
+      currentPage = 1;
+      renderListings();
+    }
+
+    // Init
+    renderListings();
+
     function handleSubmit(e) {
       e.preventDefault();
       alert('Thank you! We\'ll be in touch shortly.');
