@@ -1,0 +1,343 @@
+[
+  {
+    "id": "ln-37410019",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "Summit Center Commerce Park",
+    "address": "2700 Rasmussen Rd, Park City, UT 84098",
+    "size": "600–2,174 SF",
+    "price": "$33–$49/SF NNN",
+    "available": "Now",
+    "status": "active",
+    "description": "This professional office center offers a unique blend of convenience, functionality, and lifestyle in the heart of Park City. Located directly off I-80, the property provides unmatched regional access, making it easy for clients and employees to connect from Salt Lake City and beyond. The center features a mix of office suites and larger full-floor spaces, designed to accommodate businesses of all sizes — from solo professionals to growing companies.",
+    "features": [
+      "Conveniently located right off I-80 for easy access",
+      "Direct trail access",
+      "Surrounded by year-round recreation and amenities",
+      "Located within Summit County's premier commercial corridor",
+      "Multiple suite options from 600–2,174 SF",
+      "Office and Office/Retail spaces available",
+      "Buildings at 2750W Rasmussen Rd and 2760 Rasmussen Rd"
+    ],
+    "spaces": [
+      {
+        "suite": "2nd - H-205",
+        "building": "2750W Rasmussen Rd",
+        "size": "2,174 SF",
+        "use": "Office",
+        "rent": "$33.00 NNN"
+      },
+      {
+        "suite": "2nd - D 202",
+        "building": "2760 Rasmussen Rd - Building D",
+        "size": "600 SF",
+        "use": "Office/Retail",
+        "rent": "$49.00 NNN"
+      },
+      {
+        "suite": "2nd - D 205",
+        "building": "2760 Rasmussen Rd - Building D",
+        "size": "1,062 SF",
+        "use": "Office/Retail",
+        "rent": "Contact"
+      }
+    ],
+    "loopnetId": "37410019",
+    "loopnetUrl": "https://www.loopnet.com/Listing/2700-Rasmussen-Rd-Park-City-UT/37410019/",
+    "costarId": "37410019",
+    "costarSlugId": "RGbqDvLYeAEmveQy",
+    "photoUrl": "https://ahprdcdn1.costar.com/i2/nzUlvIRb3X0Jbs1fAl_0bZUcwsGRAkRw_8yTJUcL1B0/111/attachment.jpg",
+    "photos": [
+      "https://ahprdcdn1.costar.com/i2/nzUlvIRb3X0Jbs1fAl_0bZUcwsGRAkRw_8yTJUcL1B0/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/7B0koy14lIW4yFxqhyEuwHLCC48EFN7n1eP2gIAx_sk/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/u4Q_DNyelG_kn2sVp6pYjHRfWRvkecU8NleK9h9uvug/111/attachment.jpg"
+    ],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661",
+    "potentialCommission": "$60,685.00"
+  },
+  {
+    "id": "ln-33911358",
+    "type": "For Lease",
+    "category": "Retail",
+    "title": "Newpark Town Center",
+    "address": "Newpark Blvd, Park City, UT 84060",
+    "size": "6,100–30,000 SF",
+    "price": "$35–$38/SF NNN",
+    "available": "Now",
+    "status": "active",
+    "description": "Rare anchor opportunity in the heart of Newpark Town Center. Surrounded by great dining, retail, wellness studios plus major attractions like Swaner Preserve & EcoCenter, Basin Recreation Fieldhouse, and Utah Olympic Park. Enjoy immediate access to 325+ miles of trails, ski resorts, golf courses, and year-round events at Newpark Amphitheater & Plaza.",
+    "features": [
+      "Convenient amenities including ample onsite parking and community events",
+      "Great visibility and easy access from major highways",
+      "Surrounded by stunning views of the surrounding mountains and Swaner Preserve",
+      "Established destination featuring retail, restaurants, office, entertainment, lodging, and residential uses",
+      "8-property center with multiple buildings",
+      "Spaces at 1153 Center Dr (Building G2) and 1209 Center Dr (Building J2)"
+    ],
+    "spaces": [
+      {
+        "suite": "1st - G 200",
+        "building": "1153 Center Dr - Building G2",
+        "size": "6,100 SF",
+        "use": "Retail",
+        "rent": "$35.00 NNN"
+      },
+      {
+        "suite": "1st - 1209",
+        "building": "1209 Center Dr - Building J2",
+        "size": "30,000 SF",
+        "use": "Retail",
+        "rent": "$38.00 NNN"
+      }
+    ],
+    "loopnetId": "33911358",
+    "loopnetUrl": "https://www.loopnet.com/Listing/Newpark-Blvd-Park-City-UT/33911358/",
+    "costarId": "33911358",
+    "costarSlugId": "9ZlJP89KEdzmQe2r",
+    "photoUrl": "https://ahprdcdn1.costar.com/i2/H-dM_w2UYpV0mMOeDWLLjrofBi-0JxTULPq5FwSCB9c/111/attachment.jpg",
+    "photos": [
+      "https://ahprdcdn1.costar.com/i2/H-dM_w2UYpV0mMOeDWLLjrofBi-0JxTULPq5FwSCB9c/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/TuQCLc-FWoKHoTucHyX1yYiPIeRAS7OSyCL-mqynpro/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/SXCnRmDdS8qn1xUQML3nUg8CkMtoC3IlbC7aRWxvCbo/111/attachment.jpg"
+    ],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661",
+    "potentialCommission": "$1,154,100.00"
+  },
+  {
+    "id": "ln-29120249",
+    "type": "For Lease",
+    "category": "Retail",
+    "title": "Studio Crossing at Quinn's Junction",
+    "address": "Kearns Blvd, Park City, UT 84060",
+    "size": "1,200–15,000 SF",
+    "price": "$39–$45/SF NNN",
+    "available": "Now",
+    "status": "active",
+    "description": "Studio Crossing at Quinn's Junction is a premier Class A mixed-use commercial development located at the eastern gateway to Park City.\nOffering approximately 300,000 square feet of retail, restaurant, medical, and professional office space, the project is designed to serve one of Summit County's fastest-growing communities. Positioned directly across from Intermountain Health Park City Hospital, Studio Crossing offers exceptional visibility, easy access to Highway 40 and I-80, and is less than 10 minutes from Historic Main Street. Modern architecture, flexible floor plans, abundant parking, and a growing residential population make Studio Crossing an ideal location for businesses looking to establish or expand their presence in Park City.",
+    "features": [
+      "Approximately 300,000 SF of retail, restaurant, medical & office space",
+      "Spaces available now",
+      "Lease rates starting at $39.00/SF NNN",
+      "Modern architecture with flexible floor plans",
+      "Ample on-site parking",
+      "Adjacent to Intermountain Health Park City Hospital",
+      "Easy access to Highway 40 and I-80",
+      "Less than 10 minutes from Historic Main Street",
+      "Development Agreement in place for proposed improvements",
+      "4 floor plates of 15,000 SF each, divisible to 1,200 SF"
+    ],
+    "spaces": [
+      {
+        "suite": "1st Floor A",
+        "size": "1,200–15,000 SF",
+        "use": "Retail",
+        "rent": "$39.00 NNN"
+      },
+      {
+        "suite": "1st Floor B",
+        "size": "1,200–15,000 SF",
+        "use": "Retail",
+        "rent": "$39.00 NNN"
+      },
+      {
+        "suite": "1st Floor C",
+        "size": "1,200–15,000 SF",
+        "use": "Retail",
+        "rent": "$39.00 NNN"
+      },
+      {
+        "suite": "1st Floor D",
+        "size": "1,200–15,000 SF",
+        "use": "Retail",
+        "rent": "$45.00 NNN"
+      }
+    ],
+    "loopnetId": "29120249",
+    "loopnetUrl": "https://www.loopnet.com/Listing/Kearns-Blvd-Park-City-UT/29120249/",
+    "costarId": "29120249",
+    "costarSlugId": "WMpBm6bkLgLmx67b",
+    "photoUrl": "https://ahprdcdn1.costar.com/i2/7VizAo19lFO7lJoYGuvvEP_4KDRePifbTCiM1oHmxG0/111/attachment.jpg",
+    "photos": [
+      "https://ahprdcdn1.costar.com/i2/7VizAo19lFO7lJoYGuvvEP_4KDRePifbTCiM1oHmxG0/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/4Pi20pvBD8vblcZmXYrk6mGpAnO4X4BYpw7kWr8vcmI/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/dX-SZUYFAmO-Y7wm_anG29hyc5XgCXAirJUXRREdMfA/111/attachment.jpg"
+    ],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661",
+    "potentialCommission": "$1,458,000.00"
+  },
+  {
+    "id": "ln-40601882",
+    "type": "For Lease",
+    "category": "Retail",
+    "title": "Quarry Village",
+    "address": "3126 Quarry Rd, Park City, UT 84098",
+    "size": "7,300 SF",
+    "price": "$32/SF NNN",
+    "available": "Now",
+    "status": "active",
+    "description": "Quarry Village is a neighborhood shopping center strategically located in the heart of Pinebrook. It is one of Park City's most established and desirable communities. Offering convenient access from Interstate 80, Gorgoza Pines Road, Kilby Road, and Pinebrook Boulevard, the center serves both local residents and commuters traveling between Salt Lake City and Park City. Surrounded by affluent residential neighborhoods, schools, and recreational destinations, Quarry Village provides excellent visibility, strong co-tenancy, and a loyal customer base.",
+    "features": [
+      "Located just off I-80 with exceptional regional access",
+      "Ample on-site parking for customers and employees",
+      "Convenient location — approximately 20 min from Salt Lake City and 15-20 min to Historic Park City",
+      "Strong co-tenancy with established retailers, restaurants and daily needs services",
+      "Surrounded by established residential neighborhoods and continued commercial and residential growth",
+      "Ideal for retail, restaurant, medical, office, and service-oriented businesses",
+      "6-property shopping center"
+    ],
+    "spaces": [
+      {
+        "suite": "1st - Suite 3E",
+        "building": "3156 Quarry Rd - Building 3",
+        "size": "7,300 SF",
+        "use": "Retail",
+        "rent": "$32.00 NNN"
+      }
+    ],
+    "loopnetId": "40601882",
+    "loopnetUrl": "https://www.loopnet.com/Listing/3126-Quarry-Rd-Park-City-UT/40601882/",
+    "costarId": "40601882",
+    "costarSlugId": "XKAaDO6kAggw7Zk1",
+    "photoUrl": "https://ahprdcdn1.costar.com/i2/qJJnmyeJD3XBXpGA8PnYWWn9AI9Z_IvJc6sY2M8ZmK4/111/attachment.jpg",
+    "photos": [
+      "https://ahprdcdn1.costar.com/i2/qJJnmyeJD3XBXpGA8PnYWWn9AI9Z_IvJc6sY2M8ZmK4/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/cJnIxJ7k9iqLIY7lRHnqhgEuhYlc0ITI_5lOR_P75k4/111/attachment.jpg",
+      "https://ahprdcdn1.costar.com/i2/OpgOkxkxA1XPGwjLavD8oByGS4r8jpfKSwOFr7vbyCg/111/attachment.jpg"
+    ],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661",
+    "potentialCommission": "$140,160.00"
+  },
+  {
+    "id": "ln-39309985",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "8211 Gorgoza Pines Rd — New Construction",
+    "address": "8211 Gorgoza Pines Rd, Park City, UT 84098",
+    "size": "600–10,290 SF",
+    "price": "$38/SF NNN",
+    "available": "Winter 2026",
+    "status": "active",
+    "description": "New construction commercial building delivering Winter 2026 in Quarry Village, located at 8211 Gorgoza Pines Rd in Park City, Utah. This two-story project totals 10,290 SF and is divisible into multiple suites, offering flexible layouts to accommodate a wide range of users — whether you're looking to lease the full 10,290 SF building or a smaller suite. Lease rates start at $38.00/SF NNN with a tenant improvement allowance of $40.00/SF. CAM is estimated at $7.50 per SF.",
+    "features": [
+      "Brand new construction — Winter 2026 delivery",
+      "10,290 SF total, divisible to 600 SF",
+      "8 individual suite options available",
+      "$38.00/SF NNN starting rate",
+      "$40.00/SF tenant improvement allowance",
+      "CAM estimated at $7.50/SF",
+      "Two-story building",
+      "Office/Retail flex use",
+      "Quarry Village — Pinebrook location",
+      "0.44 acre parcel"
+    ],
+    "spaces": [
+      {
+        "suite": "1st - 101",
+        "size": "1,281 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "1st - 102",
+        "size": "1,235 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "1st - 103",
+        "size": "600 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "1st - 104",
+        "size": "1,603 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "2nd - 203",
+        "size": "1,599 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "2nd - 204",
+        "size": "1,528 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "2nd - 205",
+        "size": "1,282 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      },
+      {
+        "suite": "2nd - 206",
+        "size": "1,162 SF",
+        "use": "Office/Retail",
+        "rent": "$38.00 NNN"
+      }
+    ],
+    "loopnetId": "39309985",
+    "loopnetUrl": "https://www.loopnet.com/Listing/8211-Gorgoza-Pines-Rd-Park-City-UT/39309985/",
+    "costarId": "39309985",
+    "costarSlugId": "8MnOPQBvE6dmz0k5",
+    "photoUrl": "https://ahprdcdn1.costar.com/i2/WG9etVQRCvvjhfhiwChv69RyiH90vDMA5eY_A3g1JnQ/111/attachment.png",
+    "photos": [
+      "https://ahprdcdn1.costar.com/i2/WG9etVQRCvvjhfhiwChv69RyiH90vDMA5eY_A3g1JnQ/111/attachment.png",
+      "https://ahprdcdn1.costar.com/i2/UyqHGhIc7B3qCjX7BWX-bdnc0cSqNnymxIeMt7Oim_o/111/attachment.png",
+      "https://ahprdcdn1.costar.com/i2/-VD05gTRvSLSeFmb7Ya2AvsfoWNrarzPmkL_kDDAtes/111/attachment.png"
+    ],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661",
+    "potentialCommission": "$234,612.00"
+  },
+  {
+    "id": "test-001",
+    "title": "Test Property",
+    "address": "123 Main St, Park City, UT",
+    "size": "2,500 SF",
+    "price": "$25/SF/yr",
+    "type": "For Lease",
+    "category": "Office",
+    "description": "Test listing",
+    "photoUrl": "",
+    "status": "active"
+  },
+  {
+    "id": "999-test-blvd-park-city-ut-84098-mt96win1",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "Wile E. Test Suite",
+    "address": "999 Test Blvd, Park City, UT 84098",
+    "size": "1,000 SF",
+    "price": "/SF NNN",
+    "available": "Now",
+    "status": "active",
+    "description": "Test listing added by manage-listings.js during setup. Safe to remove.",
+    "features": [],
+    "spaces": [],
+    "photoUrl": "",
+    "photos": [],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661"
+  }
+]
