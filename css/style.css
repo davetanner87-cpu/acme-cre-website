@@ -35,12 +35,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
-  height: 96px;
+  height: 108px;
   transition: height 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav.scrolled {
-  height: 72px;
+  height: 80px;
   border-bottom-color: var(--light-gray);
   box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
@@ -100,7 +100,7 @@ nav.scrolled {
 
 /* ─── HERO ─── */
 #hero {
-  margin-top: 96px;
+  margin-top: 108px;
   min-height: 90vh;
   background: var(--black);
   display: flex;
