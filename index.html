@@ -363,7 +363,8 @@
         const res = await fetch('listings.json?v=' + Date.now());
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        LISTINGS = (data.listings || []).filter(l => l.status === 'active');
+        const items = Array.isArray(data) ? data : (data.listings || []);
+        LISTINGS = items.filter(l => l.status === 'active');
       } catch (err) {
         console.warn('Could not load listings.json — using empty list.', err);
         LISTINGS = [];
