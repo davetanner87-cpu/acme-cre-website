@@ -414,8 +414,11 @@
     <div class="listing-sidebar">
 
       <!-- Flyer Download -->
-      <a href="#" class="flyer-btn" id="flyer-link">
+      <a href="#" class="flyer-btn" id="flyer-link" download>
         ↓ Download Property Flyer
+      </a>
+      <a href="#" class="flyer-btn" id="loopnet-link" target="_blank" rel="noopener" style="display:none; margin-top:8px; background:#f5f5f5; color:#333; border:1px solid #ddd;">
+        ↗ View on LoopNet
       </a>
 
       <!-- Agent Card -->
@@ -511,6 +514,11 @@
 
         // Flyer link
         document.getElementById('flyer-link').href = 'flyers/' + id + '.pdf';
+        if (listing.loopnetUrl) {
+          const ln = document.getElementById('loopnet-link');
+          ln.href = listing.loopnetUrl;
+          ln.style.display = 'block';
+        }
       })
       .catch(err => {
         console.error('Failed to load listings:', err);
