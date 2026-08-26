@@ -5,17 +5,17 @@
     "category": "Office",
     "title": "Summit Center Commerce Park",
     "address": "2700 Rasmussen Rd, Park City, UT 84098",
-    "size": "600–2,174 SF",
-    "price": "$33–$49/SF NNN",
+    "size": "600\u20132,174 SF",
+    "price": "$33\u2013$49/SF NNN",
     "available": "Now",
     "status": "active",
-    "description": "This professional office center offers a unique blend of convenience, functionality, and lifestyle in the heart of Park City. Located directly off I-80, the property provides unmatched regional access, making it easy for clients and employees to connect from Salt Lake City and beyond. The center features a mix of office suites and larger full-floor spaces, designed to accommodate businesses of all sizes — from solo professionals to growing companies.",
+    "description": "This professional office center offers a unique blend of convenience, functionality, and lifestyle in the heart of Park City. Located directly off I-80, the property provides unmatched regional access, making it easy for clients and employees to connect from Salt Lake City and beyond. The center features a mix of office suites and larger full-floor spaces, designed to accommodate businesses of all sizes \u2014 from solo professionals to growing companies.",
     "features": [
       "Conveniently located right off I-80 for easy access",
       "Direct trail access",
       "Surrounded by year-round recreation and amenities",
       "Located within Summit County's premier commercial corridor",
-      "Multiple suite options from 600–2,174 SF",
+      "Multiple suite options from 600\u20132,174 SF",
       "Office and Office/Retail spaces available",
       "Buildings at 2750W Rasmussen Rd and 2760 Rasmussen Rd"
     ],
@@ -46,7 +46,7 @@
     "loopnetUrl": "https://www.loopnet.com/Listing/2700-Rasmussen-Rd-Park-City-UT/37410019/",
     "costarId": "37410019",
     "costarSlugId": "RGbqDvLYeAEmveQy",
-    "photoUrl": "https://ahprdcdn1.costar.com/i2/nzUlvIRb3X0Jbs1fAl_0bZUcwsGRAkRw_8yTJUcL1B0/111/attachment.jpg",
+    "photoUrl": "images/listings/placeholder-office.jpg",
     "photos": [
       "https://ahprdcdn1.costar.com/i2/nzUlvIRb3X0Jbs1fAl_0bZUcwsGRAkRw_8yTJUcL1B0/111/attachment.jpg",
       "https://ahprdcdn1.costar.com/i2/7B0koy14lIW4yFxqhyEuwHLCC48EFN7n1eP2gIAx_sk/111/attachment.jpg",
@@ -64,8 +64,8 @@
     "category": "Retail",
     "title": "Newpark Town Center",
     "address": "Newpark Blvd, Park City, UT 84060",
-    "size": "6,100–30,000 SF",
-    "price": "$35–$38/SF NNN",
+    "size": "6,100\u201330,000 SF",
+    "price": "$35\u2013$38/SF NNN",
     "available": "Now",
     "status": "active",
     "description": "Rare anchor opportunity in the heart of Newpark Town Center. Surrounded by great dining, retail, wellness studios plus major attractions like Swaner Preserve & EcoCenter, Basin Recreation Fieldhouse, and Utah Olympic Park. Enjoy immediate access to 325+ miles of trails, ski resorts, golf courses, and year-round events at Newpark Amphitheater & Plaza.",
@@ -97,7 +97,7 @@
     "loopnetUrl": "https://www.loopnet.com/Listing/Newpark-Blvd-Park-City-UT/33911358/",
     "costarId": "33911358",
     "costarSlugId": "9ZlJP89KEdzmQe2r",
-    "photoUrl": "https://ahprdcdn1.costar.com/i2/H-dM_w2UYpV0mMOeDWLLjrofBi-0JxTULPq5FwSCB9c/111/attachment.jpg",
+    "photoUrl": "images/listings/placeholder-retail.jpg",
     "photos": [
       "https://ahprdcdn1.costar.com/i2/H-dM_w2UYpV0mMOeDWLLjrofBi-0JxTULPq5FwSCB9c/111/attachment.jpg",
       "https://ahprdcdn1.costar.com/i2/TuQCLc-FWoKHoTucHyX1yYiPIeRAS7OSyCL-mqynpro/111/attachment.jpg",
@@ -115,8 +115,8 @@
     "category": "Retail",
     "title": "Studio Crossing at Quinn's Junction",
     "address": "Kearns Blvd, Park City, UT 84060",
-    "size": "1,200–15,000 SF",
-    "price": "$39–$45/SF NNN",
+    "size": "1,200\u201315,000 SF",
+    "price": "$39\u2013$45/SF NNN",
     "available": "Now",
     "status": "active",
     "description": "Studio Crossing at Quinn's Junction is a premier Class A mixed-use commercial development located at the eastern gateway to Park City.\nOffering approximately 300,000 square feet of retail, restaurant, medical, and professional office space, the project is designed to serve one of Summit County's fastest-growing communities. Positioned directly across from Intermountain Health Park City Hospital, Studio Crossing offers exceptional visibility, easy access to Highway 40 and I-80, and is less than 10 minutes from Historic Main Street. Modern architecture, flexible floor plans, abundant parking, and a growing residential population make Studio Crossing an ideal location for businesses looking to establish or expand their presence in Park City.",
@@ -135,25 +135,25 @@
     "spaces": [
       {
         "suite": "1st Floor A",
-        "size": "1,200–15,000 SF",
+        "size": "1,200\u201315,000 SF",
         "use": "Retail",
         "rent": "$39.00 NNN"
       },
       {
         "suite": "1st Floor B",
-        "size": "1,200–15,000 SF",
+        "size": "1,200\u201315,000 SF",
         "use": "Retail",
         "rent": "$39.00 NNN"
       },
       {
         "suite": "1st Floor C",
-        "size": "1,200–15,000 SF",
+        "size": "1,200\u201315,000 SF",
         "use": "Retail",
         "rent": "$39.00 NNN"
       },
       {
         "suite": "1st Floor D",
-        "size": "1,200–15,000 SF",
+        "size": "1,200\u201315,000 SF",
         "use": "Retail",
         "rent": "$45.00 NNN"
       }
@@ -162,7 +162,7 @@
     "loopnetUrl": "https://www.loopnet.com/Listing/Kearns-Blvd-Park-City-UT/29120249/",
     "costarId": "29120249",
     "costarSlugId": "WMpBm6bkLgLmx67b",
-    "photoUrl": "https://ahprdcdn1.costar.com/i2/7VizAo19lFO7lJoYGuvvEP_4KDRePifbTCiM1oHmxG0/111/attachment.jpg",
+    "photoUrl": "images/listings/placeholder-retail.jpg",
     "photos": [
       "https://ahprdcdn1.costar.com/i2/7VizAo19lFO7lJoYGuvvEP_4KDRePifbTCiM1oHmxG0/111/attachment.jpg",
       "https://ahprdcdn1.costar.com/i2/4Pi20pvBD8vblcZmXYrk6mGpAnO4X4BYpw7kWr8vcmI/111/attachment.jpg",
@@ -188,7 +188,7 @@
     "features": [
       "Located just off I-80 with exceptional regional access",
       "Ample on-site parking for customers and employees",
-      "Convenient location — approximately 20 min from Salt Lake City and 15-20 min to Historic Park City",
+      "Convenient location \u2014 approximately 20 min from Salt Lake City and 15-20 min to Historic Park City",
       "Strong co-tenancy with established retailers, restaurants and daily needs services",
       "Surrounded by established residential neighborhoods and continued commercial and residential growth",
       "Ideal for retail, restaurant, medical, office, and service-oriented businesses",
@@ -207,7 +207,7 @@
     "loopnetUrl": "https://www.loopnet.com/Listing/3126-Quarry-Rd-Park-City-UT/40601882/",
     "costarId": "40601882",
     "costarSlugId": "XKAaDO6kAggw7Zk1",
-    "photoUrl": "https://ahprdcdn1.costar.com/i2/qJJnmyeJD3XBXpGA8PnYWWn9AI9Z_IvJc6sY2M8ZmK4/111/attachment.jpg",
+    "photoUrl": "images/listings/placeholder-retail.jpg",
     "photos": [
       "https://ahprdcdn1.costar.com/i2/qJJnmyeJD3XBXpGA8PnYWWn9AI9Z_IvJc6sY2M8ZmK4/111/attachment.jpg",
       "https://ahprdcdn1.costar.com/i2/cJnIxJ7k9iqLIY7lRHnqhgEuhYlc0ITI_5lOR_P75k4/111/attachment.jpg",
@@ -223,15 +223,15 @@
     "id": "ln-39309985",
     "type": "For Lease",
     "category": "Office",
-    "title": "8211 Gorgoza Pines Rd — New Construction",
+    "title": "8211 Gorgoza Pines Rd \u2014 New Construction",
     "address": "8211 Gorgoza Pines Rd, Park City, UT 84098",
-    "size": "600–10,290 SF",
+    "size": "600\u201310,290 SF",
     "price": "$38/SF NNN",
     "available": "Winter 2026",
     "status": "active",
-    "description": "New construction commercial building delivering Winter 2026 in Quarry Village, located at 8211 Gorgoza Pines Rd in Park City, Utah. This two-story project totals 10,290 SF and is divisible into multiple suites, offering flexible layouts to accommodate a wide range of users — whether you're looking to lease the full 10,290 SF building or a smaller suite. Lease rates start at $38.00/SF NNN with a tenant improvement allowance of $40.00/SF. CAM is estimated at $7.50 per SF.",
+    "description": "New construction commercial building delivering Winter 2026 in Quarry Village, located at 8211 Gorgoza Pines Rd in Park City, Utah. This two-story project totals 10,290 SF and is divisible into multiple suites, offering flexible layouts to accommodate a wide range of users \u2014 whether you're looking to lease the full 10,290 SF building or a smaller suite. Lease rates start at $38.00/SF NNN with a tenant improvement allowance of $40.00/SF. CAM is estimated at $7.50 per SF.",
     "features": [
-      "Brand new construction — Winter 2026 delivery",
+      "Brand new construction \u2014 Winter 2026 delivery",
       "10,290 SF total, divisible to 600 SF",
       "8 individual suite options available",
       "$38.00/SF NNN starting rate",
@@ -239,7 +239,7 @@
       "CAM estimated at $7.50/SF",
       "Two-story building",
       "Office/Retail flex use",
-      "Quarry Village — Pinebrook location",
+      "Quarry Village \u2014 Pinebrook location",
       "0.44 acre parcel"
     ],
     "spaces": [
@@ -296,7 +296,7 @@
     "loopnetUrl": "https://www.loopnet.com/Listing/8211-Gorgoza-Pines-Rd-Park-City-UT/39309985/",
     "costarId": "39309985",
     "costarSlugId": "8MnOPQBvE6dmz0k5",
-    "photoUrl": "https://ahprdcdn1.costar.com/i2/WG9etVQRCvvjhfhiwChv69RyiH90vDMA5eY_A3g1JnQ/111/attachment.png",
+    "photoUrl": "images/listings/placeholder-office.jpg",
     "photos": [
       "https://ahprdcdn1.costar.com/i2/WG9etVQRCvvjhfhiwChv69RyiH90vDMA5eY_A3g1JnQ/111/attachment.png",
       "https://ahprdcdn1.costar.com/i2/UyqHGhIc7B3qCjX7BWX-bdnc0cSqNnymxIeMt7Oim_o/111/attachment.png",
@@ -317,7 +317,7 @@
     "type": "For Lease",
     "category": "Office",
     "description": "Test listing",
-    "photoUrl": "",
+    "photoUrl": "images/listings/placeholder-office.jpg",
     "status": "active"
   }
 ]
