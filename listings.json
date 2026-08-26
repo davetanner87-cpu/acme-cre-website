@@ -307,17 +307,5 @@
     "brokerEmail": "tanker@acme-cre.com",
     "brokerPhone": "435-655-5661",
     "potentialCommission": "$234,612.00"
-  },
-  {
-    "id": "test-001",
-    "title": "Test Property",
-    "address": "123 Main St, Park City, UT",
-    "size": "2,500 SF",
-    "price": "$25/SF/yr",
-    "type": "For Lease",
-    "category": "Office",
-    "description": "Test listing",
-    "photoUrl": "images/listings/placeholder-office.jpg",
-    "status": "active"
   }
 ]
