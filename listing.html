@@ -473,70 +473,50 @@
   </footer>
 
   <script>
-    // Load listing data from URL params (e.g. listing.html?id=class-a-office)
-    // When LoopNet sync is live, this pulls from listings.json by ID
+    // Load listing data from listings.json by ID param
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
 
-    // Placeholder — will be replaced by fetch from listings.json
-    const LISTINGS = {
-      'class-a-office': {
-        type: 'For Lease',
-        title: 'Class A Office Space',
-        address: 'Park City, UT 84098',
-        size: '2,500 SF',
-        price: 'TBD/SF',
-        category: 'Office',
-        available: 'Now',
-        description: 'Premium Class A office space in the heart of Park City. Modern finishes, abundant natural light, and flexible floor plan options available. Ideal for professional services, financial, or technology firms seeking a prestigious Park City address.',
-        features: ['Modern finishes', 'Abundant natural light', 'Flexible floor plan', 'Ample parking', 'High-speed fiber', 'Conference rooms', 'Mountain views', 'ADA compliant']
-      },
-      'retail-mixed-use': {
-        type: 'For Sale',
-        title: 'Retail / Mixed Use',
-        address: 'Park City, UT 84060',
-        size: '4,800 SF',
-        price: 'Contact',
-        category: 'Retail',
-        available: 'Now',
-        description: 'Prime retail and mixed-use opportunity in a high-traffic Park City location. Ground floor retail with residential or office above. Exceptional visibility and foot traffic year-round.',
-        features: ['High foot traffic', 'Mixed use zoning', 'Ground floor retail', 'Strong visibility', 'Year-round traffic', 'Near Main Street', 'Turnkey opportunity', 'Investment grade']
-      },
-      'industrial-flex': {
-        type: 'Build to Suit',
-        title: 'Industrial / Flex Space',
-        address: 'Kimball Junction, UT',
-        size: 'Flexible',
-        price: 'TBD',
-        category: 'Industrial',
-        available: 'TBD',
-        description: 'Build-to-suit industrial and flex space opportunity at Kimball Junction. Flexible sizing from 5,000 to 50,000 SF. Ideal for distribution, light manufacturing, or flex office/warehouse configurations.',
-        features: ['Flexible sizing', 'Build to suit', 'Grade level doors', 'Clear height 24\'', 'Heavy power available', 'Easy I-80 access', 'Ample truck court', 'Office buildout available']
-      }
-    };
+    fetch('listings.json')
+      .then(r => r.json())
+      .then(data => {
+        const listings = Array.isArray(data) ? data : (data.listings || []);
+        const listing = listings.find(l => l.id === id);
 
-    const listing = LISTINGS[id] || LISTINGS['class-a-office'];
+        if (!listing) {
+          document.getElementById('hero-title').textContent = 'Listing Not Found';
+          document.getElementById('hero-address').textContent = 'This listing may have been removed or the link is invalid.';
+          return;
+        }
 
-    // Populate page
-    document.title = `${listing.title} — ACME Commercial Real Estate`;
-    document.getElementById('page-desc').content = `${listing.type} — ${listing.size} — ${listing.address}`;
-    document.getElementById('hero-tag').textContent = listing.type;
-    document.getElementById('hero-tag').style.background = listing.type === 'For Sale' ? '#676767' : '#F47D4C';
-    document.getElementById('hero-title').textContent = listing.title;
-    document.getElementById('hero-address').textContent = listing.address;
-    document.getElementById('stat-size').textContent = listing.size;
-    document.getElementById('stat-price').textContent = listing.price;
-    document.getElementById('stat-type').textContent = listing.category;
-    document.getElementById('stat-available').textContent = listing.available;
-    document.getElementById('listing-desc').textContent = listing.description;
-    document.getElementById('page-title').textContent = `${listing.title} — ACME Commercial Real Estate`;
+        // Populate page
+        document.title = listing.title + ' — ACME Commercial Real Estate';
+        document.getElementById('page-desc').content = listing.type + ' — ' + (listing.size || '') + ' — ' + listing.address;
+        document.getElementById('hero-tag').textContent = listing.type;
+        document.getElementById('hero-tag').style.background = listing.type === 'For Sale' ? '#676767' : '#F47D4C';
+        document.getElementById('hero-title').textContent = listing.title;
+        document.getElementById('hero-address').textContent = listing.address;
+        document.getElementById('stat-size').textContent = listing.size || 'Contact';
+        document.getElementById('stat-price').textContent = listing.price || 'Contact';
+        document.getElementById('stat-type').textContent = listing.category || listing.propertyType || '';
+        document.getElementById('stat-available').textContent = listing.available || listing.status || 'Now';
+        document.getElementById('listing-desc').textContent = listing.description || '';
+        document.getElementById('page-title').textContent = listing.title + ' — ACME Commercial Real Estate';
 
-    // Features
-    const featuresList = document.getElementById('features-list');
-    featuresList.innerHTML = listing.features.map(f => `<li>${f}</li>`).join('');
+        // Features
+        const featuresList = document.getElementById('features-list');
+        if (listing.features && listing.features.length) {
+          featuresList.innerHTML = listing.features.map(f => '<li>' + f + '</li>').join('');
+        }
 
-    // Flyer link (will point to auto-generated PDF when LoopNet sync is live)
-    document.getElementById('flyer-link').href = `flyers/${id || 'listing'}.pdf`;
+        // Flyer link
+        document.getElementById('flyer-link').href = 'flyers/' + id + '.pdf';
+      })
+      .catch(err => {
+        console.error('Failed to load listings:', err);
+      });
+
+
 
     function handleInquiry(e) {
       e.preventDefault();
