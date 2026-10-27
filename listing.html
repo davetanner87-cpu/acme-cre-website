@@ -506,6 +506,15 @@
         document.getElementById('listing-desc').textContent = listing.description || '';
         document.getElementById('page-title').textContent = listing.title + ' — ACME Commercial Real Estate';
 
+        // Hero photo
+        const heroImg = document.getElementById('hero-img');
+        const photoSrc = (listing.photos && listing.photos[0]) || listing.photoUrl || null;
+        if (photoSrc) {
+          heroImg.innerHTML = '<img src="' + photoSrc + '" alt="' + listing.title + '" style="width:100%;height:100%;object-fit:cover;display:block;">';
+        } else {
+          heroImg.textContent = '[ Property Photo ]';
+        }
+
         // Features
         const featuresList = document.getElementById('features-list');
         if (listing.features && listing.features.length) {
