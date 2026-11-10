@@ -5,17 +5,17 @@
     "category": "Office",
     "title": "Summit Center Commerce Park",
     "address": "2700 Rasmussen Rd, Park City, UT 84098",
-    "size": "600\u20132,174 SF",
-    "price": "$33\u2013$49/SF NNN",
+    "size": "600–2,174 SF",
+    "price": "$33–$49/SF NNN",
     "available": "Now",
     "status": "active",
-    "description": "This professional office center offers a unique blend of convenience, functionality, and lifestyle in the heart of Park City. Located directly off I-80, the property provides unmatched regional access, making it easy for clients and employees to connect from Salt Lake City and beyond. The center features a mix of office suites and larger full-floor spaces, designed to accommodate businesses of all sizes \u2014 from solo professionals to growing companies.",
+    "description": "This professional office center offers a unique blend of convenience, functionality, and lifestyle in the heart of Park City. Located directly off I-80, the property provides unmatched regional access, making it easy for clients and employees to connect from Salt Lake City and beyond. The center features a mix of office suites and larger full-floor spaces, designed to accommodate businesses of all sizes — from solo professionals to growing companies.",
     "features": [
       "Conveniently located right off I-80 for easy access",
       "Direct trail access",
       "Surrounded by year-round recreation and amenities",
       "Located within Summit County's premier commercial corridor",
-      "Multiple suite options from 600\u20132,174 SF",
+      "Multiple suite options from 600–2,174 SF",
       "Office and Office/Retail spaces available",
       "Buildings at 2750W Rasmussen Rd and 2760 Rasmussen Rd"
     ],
@@ -64,8 +64,8 @@
     "category": "Retail",
     "title": "Newpark Town Center",
     "address": "Newpark Blvd, Park City, UT 84060",
-    "size": "6,100\u201330,000 SF",
-    "price": "$35\u2013$38/SF NNN",
+    "size": "6,100–30,000 SF",
+    "price": "$35–$38/SF NNN",
     "available": "Now",
     "status": "active",
     "description": "Rare anchor opportunity in the heart of Newpark Town Center. Surrounded by great dining, retail, wellness studios plus major attractions like Swaner Preserve & EcoCenter, Basin Recreation Fieldhouse, and Utah Olympic Park. Enjoy immediate access to 325+ miles of trails, ski resorts, golf courses, and year-round events at Newpark Amphitheater & Plaza.",
@@ -115,8 +115,8 @@
     "category": "Retail",
     "title": "Studio Crossing at Quinn's Junction",
     "address": "Kearns Blvd, Park City, UT 84060",
-    "size": "1,200\u201315,000 SF",
-    "price": "$39\u2013$45/SF NNN",
+    "size": "1,200–15,000 SF",
+    "price": "$39–$45/SF NNN",
     "available": "Now",
     "status": "active",
     "description": "Studio Crossing at Quinn's Junction is a premier Class A mixed-use commercial development located at the eastern gateway to Park City.\nOffering approximately 300,000 square feet of retail, restaurant, medical, and professional office space, the project is designed to serve one of Summit County's fastest-growing communities. Positioned directly across from Intermountain Health Park City Hospital, Studio Crossing offers exceptional visibility, easy access to Highway 40 and I-80, and is less than 10 minutes from Historic Main Street. Modern architecture, flexible floor plans, abundant parking, and a growing residential population make Studio Crossing an ideal location for businesses looking to establish or expand their presence in Park City.",
@@ -135,25 +135,25 @@
     "spaces": [
       {
         "suite": "1st Floor A",
-        "size": "1,200\u201315,000 SF",
+        "size": "1,200–15,000 SF",
         "use": "Retail",
         "rent": "$39.00 NNN"
       },
       {
         "suite": "1st Floor B",
-        "size": "1,200\u201315,000 SF",
+        "size": "1,200–15,000 SF",
         "use": "Retail",
         "rent": "$39.00 NNN"
       },
       {
         "suite": "1st Floor C",
-        "size": "1,200\u201315,000 SF",
+        "size": "1,200–15,000 SF",
         "use": "Retail",
         "rent": "$39.00 NNN"
       },
       {
         "suite": "1st Floor D",
-        "size": "1,200\u201315,000 SF",
+        "size": "1,200–15,000 SF",
         "use": "Retail",
         "rent": "$45.00 NNN"
       }
@@ -188,7 +188,7 @@
     "features": [
       "Located just off I-80 with exceptional regional access",
       "Ample on-site parking for customers and employees",
-      "Convenient location \u2014 approximately 20 min from Salt Lake City and 15-20 min to Historic Park City",
+      "Convenient location — approximately 20 min from Salt Lake City and 15-20 min to Historic Park City",
       "Strong co-tenancy with established retailers, restaurants and daily needs services",
       "Surrounded by established residential neighborhoods and continued commercial and residential growth",
       "Ideal for retail, restaurant, medical, office, and service-oriented businesses",
@@ -223,15 +223,15 @@
     "id": "ln-39309985",
     "type": "For Lease",
     "category": "Office",
-    "title": "8211 Gorgoza Pines Rd \u2014 New Construction",
+    "title": "8211 Gorgoza Pines Rd — New Construction",
     "address": "8211 Gorgoza Pines Rd, Park City, UT 84098",
-    "size": "600\u201310,290 SF",
+    "size": "600–10,290 SF",
     "price": "$38/SF NNN",
     "available": "Winter 2026",
     "status": "active",
-    "description": "New construction commercial building delivering Winter 2026 in Quarry Village, located at 8211 Gorgoza Pines Rd in Park City, Utah. This two-story project totals 10,290 SF and is divisible into multiple suites, offering flexible layouts to accommodate a wide range of users \u2014 whether you're looking to lease the full 10,290 SF building or a smaller suite. Lease rates start at $38.00/SF NNN with a tenant improvement allowance of $40.00/SF. CAM is estimated at $7.50 per SF.",
+    "description": "New construction commercial building delivering Winter 2026 in Quarry Village, located at 8211 Gorgoza Pines Rd in Park City, Utah. This two-story project totals 10,290 SF and is divisible into multiple suites, offering flexible layouts to accommodate a wide range of users — whether you're looking to lease the full 10,290 SF building or a smaller suite. Lease rates start at $38.00/SF NNN with a tenant improvement allowance of $40.00/SF. CAM is estimated at $7.50 per SF.",
     "features": [
-      "Brand new construction \u2014 Winter 2026 delivery",
+      "Brand new construction — Winter 2026 delivery",
       "10,290 SF total, divisible to 600 SF",
       "8 individual suite options available",
       "$38.00/SF NNN starting rate",
@@ -239,7 +239,7 @@
       "CAM estimated at $7.50/SF",
       "Two-story building",
       "Office/Retail flex use",
-      "Quarry Village \u2014 Pinebrook location",
+      "Quarry Village — Pinebrook location",
       "0.44 acre parcel"
     ],
     "spaces": [
@@ -296,7 +296,7 @@
     "loopnetUrl": "https://www.loopnet.com/Listing/8211-Gorgoza-Pines-Rd-Park-City-UT/39309985/",
     "costarId": "39309985",
     "costarSlugId": "8MnOPQBvE6dmz0k5",
-    "photoUrl": "images/listings/ln-39309985.png",
+    "photoUrl": "images/listing-8211-gorgoza-pines-rd.png",
     "photos": [
       "https://ahprdcdn1.costar.com/i2/WG9etVQRCvvjhfhiwChv69RyiH90vDMA5eY_A3g1JnQ/111/attachment.png",
       "https://ahprdcdn1.costar.com/i2/UyqHGhIc7B3qCjX7BWX-bdnc0cSqNnymxIeMt7Oim_o/111/attachment.png",
@@ -307,5 +307,103 @@
     "brokerEmail": "tanker@acme-cre.com",
     "brokerPhone": "435-655-5661",
     "potentialCommission": "$234,612.00"
+  },
+  {
+    "id": "ln-42599303",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "Visitor Center Building",
+    "address": "1794 Olympic Pky, Park City, UT 84098",
+    "size": "5,502 SF",
+    "price": "$34.00/SF/YR",
+    "available": "Now",
+    "status": "active",
+    "description": "An exceptional opportunity to lease 5,502 SF of professional office space in the Kimball Junction area of Park City, Utah. Located on the second floor of the Visitor Center Building, this suite offers a combination of functionality, comfort, and high-end finishes — an ideal setting for businesses seeking a professional and welcoming work environment.\n\nThe thoughtfully designed layout features 10 private offices, 5 cubicles, and 2 conference rooms, providing a balance of private workspace and collaborative areas. Additional amenities include a dedicated break room and shower. High-end finishes throughout create a polished atmosphere suitable for a wide range of professional users.\n\nConveniently located with direct access to I-80 and Highway 224, connecting Salt Lake City, Park City, and the Wasatch Back. Minutes from shopping, dining, and entertainment at Kimball Junction.",
+    "features": [
+      "5,502 SF second floor office suite",
+      "10 private offices, 5 cubicles, and 2 conference rooms",
+      "Dedicated break room and shower",
+      "High-end finishes throughout",
+      "Lots of natural light",
+      "Prime Kimball Junction location",
+      "Convenient access to I-80 and Highway 224",
+      "Minutes from shopping, dining, and entertainment",
+      "Class B building, built 2000",
+      "Surface parking"
+    ],
+    "spaces": [
+      {
+        "suite": "2nd Floor, Ste 210",
+        "size": "5,502 SF",
+        "use": "Office",
+        "rent": "$34.00/SF/YR",
+        "term": "Negotiable",
+        "availability": "Now"
+      }
+    ],
+    "loopnetId": "42599303",
+    "loopnetUrl": "https://www.loopnet.com/Listing/1794-Olympic-Pky-Park-City-UT/42599303/",
+    "photoUrl": null,
+    "photos": [],
+    "flyerUrl": null,
+    "broker": "Tim Anker",
+    "brokerEmail": "tanker@acme-cre.com",
+    "brokerPhone": "435-655-5661"
+  },
+  {
+    "id": "ln-39375462",
+    "type": "For Sale",
+    "category": "Land",
+    "title": "BLC Parcels — Deer Valley Resort Adjacency",
+    "address": "Red Cloud Rd., Park City, UT 84060",
+    "size": "40 AC",
+    "price": "Price Upon Request",
+    "available": "Now",
+    "status": "active",
+    "description": "An extremely rare land opportunity — approximately 40 acres adjacent to Deer Valley Resort in Park City, Utah. Comprised of two 20-acre parcels (Logan Lot 724 and U.P. No.2 Lot 724), these investment-grade parcels border Deer Valley Resort, Extell Development, and Red Cloud Lots in one of the most coveted resort communities in the United States.\n\nThe property offers potential for custom estate homesite development with ski-in/ski-out access to upper Deer Valley. Zoned R2 (Single Family Development), the parcels are surrounded by established luxury resort development and offer a mountain setting with access to year-round recreation.\n\nEntitlement work, access, and easements will be needed to develop these parcels into estate lots. This can be structured as a long-term lease or purchase. Contact Steve Hooker for details.",
+    "features": [
+      "Approximately 40 acres adjacent to Deer Valley Resort",
+      "Two 20-acre parcels — PCA-S-79-C and PCA-S-79-B",
+      "Ski-in/ski-out upper Deer Valley location",
+      "Zoned R2 — Single Family Development",
+      "Bordered by Red Cloud Lots, Deer Valley Resort, and Extell Dev. parcels",
+      "Potential for custom estate homesite development",
+      "Located near the Red Cloud residential area",
+      "Surrounded by established luxury resort development",
+      "Long-term lease or purchase — both options available",
+      "Extremely rare land opportunity in the Resort area"
+    ],
+    "spaces": [
+      {
+        "suite": "Parcel PCA-S-79-C",
+        "size": "20 AC",
+        "use": "Land",
+        "rent": "Price Upon Request"
+      },
+      {
+        "suite": "Parcel PCA-S-79-B",
+        "size": "20 AC",
+        "use": "Land",
+        "rent": "Price Upon Request"
+      }
+    ],
+    "loopnetId": "39375462",
+    "loopnetUrl": "https://www.loopnet.com/Listing/Parcels-Logan-lot-724-UP-No2-lot-724-Park-City-UT/39375462/",
+    "photoUrl": "images/listings/ln-39375462.jpg",
+    "photos": [
+      "images/listings/staging/blc-parcels-deer-valley-1.jpg",
+      "images/listings/staging/blc-parcels-deer-valley-2.jpg",
+      "images/listings/staging/blc-parcels-deer-valley-3.jpg",
+      "images/listings/staging/blc-parcels-deer-valley-4.jpg",
+      "images/listings/staging/blc-parcels-deer-valley-5.jpg",
+      "images/listings/staging/blc-parcels-deer-valley-6.jpg"
+    ],
+    "flyerUrl": "flyers/blc-parcels-deer-valley.pdf",
+    "saleType": "Investment",
+    "saleCondition": "Redevelopment Project",
+    "zoning": "R2 — Single Family Development",
+    "broker": "Steve Hooker",
+    "brokerEmail": "shooker@acme-cre.com",
+    "brokerPhone": "801-509-3560"
   }
 ]
