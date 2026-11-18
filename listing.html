@@ -428,13 +428,13 @@
         </div>
         <div class="sidebar-card-body">
           <div class="agent-info">
-            <div class="agent-photo">[ Photo ]</div>
+            <div class="agent-photo" id="agent-photo-wrap">[ Photo ]</div>
             <div class="agent-details">
-              <h4>Tim Anker</h4>
-              <p class="agent-title">Principal Broker</p>
+              <h4 id="agent-name">Tim Anker</h4>
+              <p class="agent-title" id="agent-title">Principal Broker</p>
             </div>
           </div>
-          <div class="contact-links">
+          <div class="contact-links" id="agent-contact-links">
             <a href="tel:4356555661" class="contact-link">
               <span class="icon">📞</span>
               435.655.5661
@@ -519,6 +519,37 @@
         const featuresList = document.getElementById('features-list');
         if (listing.features && listing.features.length) {
           featuresList.innerHTML = listing.features.map(f => '<li>' + f + '</li>').join('');
+        }
+
+        // Agent card
+        const brokerMap = {
+          'Tim Anker':    { title: 'Principal Broker',        photo: 'images/tim-anker.jpg',    phone: '4356555661',  phoneDisplay: '435.655.5661',  email: 'tanker@acme-cre.com' },
+          'David Nadler': { title: 'Principal',               photo: 'images/david-nadler.jpg', phone: null,          phoneDisplay: null,            email: 'info@acme-cre.com' },
+          'Steve Hooker': { title: 'Director & Partner Broker', photo: 'images/steve-hooker.jpg', phone: '8015093560',  phoneDisplay: '801.509.3560',  email: 'shooker@acme-cre.com' }
+        };
+        const brokerName = listing.broker || 'Tim Anker';
+        const brokerInfo = brokerMap[brokerName] || {};
+        const brokerEmail = listing.brokerEmail || brokerInfo.email || 'tanker@acme-cre.com';
+        const brokerRawPhone = listing.brokerPhone ? listing.brokerPhone.replace(/[^0-9]/g, '') : (brokerInfo.phone || '4356555661');
+        const brokerPhoneDisplay = listing.brokerPhone || brokerInfo.phoneDisplay || '435.655.5661';
+        const brokerTitle = brokerInfo.title || 'Broker';
+        const brokerPhoto = brokerInfo.photo || null;
+
+        document.getElementById('agent-name').textContent = brokerName;
+        document.getElementById('agent-title').textContent = brokerTitle;
+        const photoWrap = document.getElementById('agent-photo-wrap');
+        if (brokerPhoto) {
+          photoWrap.innerHTML = '<img src="' + brokerPhoto + '" alt="' + brokerName + '">';
+        } else {
+          photoWrap.textContent = brokerName.split(' ').map(n => n[0]).join('');
+        }
+        const contactLinks = document.getElementById('agent-contact-links');
+        contactLinks.innerHTML = '';
+        if (brokerRawPhone) {
+          contactLinks.innerHTML += '<a href="tel:' + brokerRawPhone + '" class="contact-link"><span class="icon">📞</span>' + brokerPhoneDisplay + '</a>';
+        }
+        if (brokerEmail) {
+          contactLinks.innerHTML += '<a href="mailto:' + brokerEmail + '" class="contact-link"><span class="icon">✉️</span>' + brokerEmail + '</a>';
         }
 
         // Flyer link
