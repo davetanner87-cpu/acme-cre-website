@@ -553,7 +553,13 @@
         }
 
         // Flyer link
-        document.getElementById('flyer-link').href = 'flyers/' + id + '.pdf';
+        const flyerBtn = document.getElementById('flyer-link');
+        if (listing.flyerUrl) {
+          flyerBtn.href = listing.flyerUrl;
+          flyerBtn.style.display = 'block';
+        } else {
+          flyerBtn.style.display = 'none';
+        }
         if (listing.loopnetUrl) {
           const ln = document.getElementById('loopnet-link');
           ln.href = listing.loopnetUrl;

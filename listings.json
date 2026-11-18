@@ -344,7 +344,9 @@
     "loopnetId": "42599303",
     "loopnetUrl": "https://www.loopnet.com/Listing/1794-Olympic-Pky-Park-City-UT/42599303/",
     "photoUrl": "images/listings/ln-42599303.jpg",
-    "photos": ["images/listings/ln-42599303.jpg"],
+    "photos": [
+      "images/listings/ln-42599303.jpg"
+    ],
     "flyerUrl": null,
     "broker": "Tim Anker",
     "brokerEmail": "tanker@acme-cre.com",
@@ -389,7 +391,7 @@
     ],
     "loopnetId": "39375462",
     "loopnetUrl": "https://www.loopnet.com/Listing/Parcels-Logan-lot-724-UP-No2-lot-724-Park-City-UT/39375462/",
-    "photoUrl": "images/listings/ln-39375462.jpg",
+    "photoUrl": "images/listing-parcels-logan-lot-724.jpg",
     "photos": [
       "images/listings/staging/blc-parcels-deer-valley-1.jpg",
       "images/listings/staging/blc-parcels-deer-valley-2.jpg",
@@ -402,6 +404,214 @@
     "saleType": "Investment",
     "saleCondition": "Redevelopment Project",
     "zoning": "R2 — Single Family Development",
+    "broker": "Steve Hooker",
+    "brokerEmail": "shooker@acme-cre.com",
+    "brokerPhone": "801-509-3560"
+  },
+  {
+    "id": "ln-41548967",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "Building 7",
+    "address": "12244 S Business Park Dr, Draper, UT 84020",
+    "size": "1,400 – 6,101 SF",
+    "price": "$14.00/SF/YR",
+    "available": "Now",
+    "status": "active",
+    "description": "Class B office building in Draper's Business Park corridor offering two flexible suites from 1,400 to 3,251 SF. The 2-story, 33,996 SF building features 12' unfinished ceiling heights, 90 surface parking spaces, and convenient access to I-15 and the greater Salt Lake Valley. Suite 215 on the 2nd floor is available immediately; Suite 115 on the 1st floor is available February 2027. Both suites are delivered with full build-out and offer flexible lease terms from 2 to 10 years.",
+    "features": [
+      "2 office suites available — 1,400 to 3,251 SF",
+      "$14.00/SF/YR",
+      "2nd floor suite available now; 1st floor available Feb 2027",
+      "Full build-out delivered",
+      "Flexible lease terms: 2–10 years",
+      "90 surface parking spaces",
+      "12' unfinished ceiling heights",
+      "2-story, 33,996 SF Class B building",
+      "Built 1975",
+      "Draper Business Park — easy I-15 access"
+    ],
+    "spaces": [
+      {
+        "suite": "1st Floor, Ste 115",
+        "size": "1,500 – 3,251 SF",
+        "use": "Office",
+        "rent": "$14.00/SF/YR",
+        "term": "2–10 Years",
+        "available": "Feb 1, 2027"
+      },
+      {
+        "suite": "2nd Floor, Ste 215",
+        "size": "1,400 – 2,850 SF",
+        "use": "Office",
+        "rent": "$14.00/SF/YR",
+        "term": "3–10 Years",
+        "available": "Now"
+      }
+    ],
+    "loopnetId": "41548967",
+    "loopnetUrl": "https://www.loopnet.com/Listing/12244-S-Business-Park-Dr-Draper-UT/41548967/",
+    "photoUrl": "images/listings/ln-41548967.png",
+    "photos": ["images/listings/ln-41548967.png"],
+    "flyerUrl": null,
+    "broker": "Steve Hooker",
+    "brokerEmail": "shooker@acme-cre.com",
+    "brokerPhone": "801-509-3560"
+  },
+  {
+    "id": "ln-38494031",
+    "type": "For Lease",
+    "category": "Retail",
+    "title": "Kimball Plaza",
+    "address": "1612-1620 W Ute Blvd, Park City, UT 84098",
+    "size": "1,200 SF",
+    "price": "$26.00/SF/YR NNN",
+    "available": "Now",
+    "status": "active",
+    "description": "Prime retail or restaurant space in Kimball Plaza, a 40,000 SF neighborhood center serving all of Park City and Summit County. This 2nd floor suite offers an open floor plan ideal for a restaurant or office, with stunning views of all surrounding resorts and access to a 1,900 SF shared outdoor deck. Kimball Plaza features 160 parking spaces, 15 tenants, freeway visibility, and a signalized corner intersection — one of Park City's most accessible and well-trafficked retail locations.",
+    "features": [
+      "1,200 SF retail/restaurant/office suite — 2nd floor",
+      "$26.00/SF/YR Triple Net (NNN)",
+      "Panoramic views of all Park City resorts",
+      "1,900 SF shared 2nd floor outdoor deck",
+      "Open floor plan — restaurant or office ready",
+      "160 parking spaces",
+      "Corner lot with freeway visibility",
+      "Signalized intersection",
+      "15-tenant neighborhood center — stable mix",
+      "Tenant controlled HVAC"
+    ],
+    "spaces": [
+      {
+        "suite": "2nd Floor, Ste 210",
+        "size": "1,200 SF",
+        "use": "Retail",
+        "rent": "$26.00/SF/YR NNN",
+        "term": "3–5 Years",
+        "available": "Now"
+      }
+    ],
+    "loopnetId": "38494031",
+    "loopnetUrl": "https://www.loopnet.com/Listing/1612-1620-W-Ute-Blvd-Park-City-UT/38494031/",
+    "photoUrl": "images/listings/ln-38494031.png",
+    "photos": ["images/listings/ln-38494031.png"],
+    "flyerUrl": null,
+    "broker": "Steve Hooker",
+    "brokerEmail": "shooker@acme-cre.com",
+    "brokerPhone": "801-509-3560"
+  },
+  {
+    "id": "ln-37511819",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "Fairway Point I",
+    "address": "3130 W Maple Loop Dr, Lehi, UT 84043",
+    "size": "1,471 – 13,182 SF",
+    "price": "$16.00/SF/YR",
+    "available": "Now",
+    "status": "active",
+    "description": "Renovated mid-rise office building at Thanksgiving Point in Lehi's Silicon Slopes corridor. Five suites available from 1,471 to 4,226 SF, featuring new finishes, lighting, and full build-out. Exceptional on-site amenities include a private theater seating 40, lockers and showers, and a breakroom. Located just 1 minute from I-15 with 134 surface parking spaces and 24-hour access. Suites available now through December 2026.",
+    "features": [
+      "5 office suites from 1,471 to 4,226 SF",
+      "$16.00/SF/YR",
+      "Renovated 2025 — new finishes and lighting",
+      "Private theater with seating for 40",
+      "Lockers and showers on-site",
+      "134 surface parking spaces",
+      "1 minute to I-15 — Thanksgiving Point",
+      "24-hour access",
+      "3-story, 31,290 SF Class B building",
+      "Silicon Slopes / Lehi tech corridor"
+    ],
+    "spaces": [
+      {
+        "suite": "1st Floor, Ste 130",
+        "size": "3,300 SF",
+        "use": "Office",
+        "rent": "$16.00/SF/YR",
+        "term": "3–5 Years",
+        "available": "Now"
+      },
+      {
+        "suite": "1st Floor, Ste GL50",
+        "size": "3,100 – 4,226 SF",
+        "use": "Office",
+        "rent": "$16.00/SF/YR",
+        "term": "3–10 Years",
+        "available": "Now"
+      },
+      {
+        "suite": "2nd Floor, Ste 201",
+        "size": "2,471 SF",
+        "use": "Office",
+        "rent": "$16.00/SF/YR",
+        "term": "2–5 Years",
+        "available": "Dec 31, 2026"
+      },
+      {
+        "suite": "2nd Floor, Ste 202",
+        "size": "1,714 SF",
+        "use": "Office",
+        "rent": "$16.00/SF/YR",
+        "term": "2–5 Years",
+        "available": "Dec 1, 2026"
+      },
+      {
+        "suite": "2nd Floor, Ste 205",
+        "size": "1,471 SF",
+        "use": "Office",
+        "rent": "$16.00/SF/YR",
+        "term": "2–5 Years",
+        "available": "Dec 1, 2026"
+      }
+    ],
+    "loopnetId": "37511819",
+    "loopnetUrl": "https://www.loopnet.com/Listing/3130-W-Maple-Loop-Dr-Lehi-UT/37511819/",
+    "photoUrl": "images/listings/ln-37511819.png",
+    "photos": ["images/listings/ln-37511819.png"],
+    "flyerUrl": null,
+    "broker": "Steve Hooker",
+    "brokerEmail": "shooker@acme-cre.com",
+    "brokerPhone": "801-509-3560"
+  },
+  {
+    "id": "ln-28072495",
+    "type": "For Lease",
+    "category": "Office",
+    "title": "The Pioneer Building",
+    "address": "1910 Prospector Ave, Park City, UT 84060",
+    "size": "600 SF",
+    "price": "$20.00 – $29.00/SF/YR NNN",
+    "available": "Pending",
+    "status": "active",
+    "description": "Office space available in the heart of Prospector Square, Park City. This 3rd floor suite offers beautiful views of the Wasatch Mountains and surrounding resorts, abundant natural light, and recent interior renovations including updated flooring and paint. Located just minutes from Park City Mountain Resort with walkable access to restaurants, services, and neighborhood amenities. Building renovated in 2005 — 3-story, 20,167 SF Class B with 13' ceiling heights and 30 surface parking spaces.",
+    "features": [
+      "600 SF office suite — 3rd floor",
+      "$20.00 – $29.00/SF/YR NNN",
+      "Views of Wasatch Mountains and surrounding resorts",
+      "Heart of Prospector Square — walkable amenities",
+      "Minutes from Park City Mountain Resort",
+      "Updated finishes — flooring and paint",
+      "Abundant natural light",
+      "30 surface parking spaces",
+      "13' unfinished ceiling heights",
+      "3-story, 20,167 SF Class B building — renovated 2005"
+    ],
+    "spaces": [
+      {
+        "suite": "3rd Floor, Ste 303",
+        "size": "600 SF",
+        "use": "Office",
+        "rent": "$20.00/SF/YR NNN",
+        "term": "2–5 Years",
+        "available": "Pending"
+      }
+    ],
+    "loopnetId": "28072495",
+    "loopnetUrl": "https://www.loopnet.com/Listing/1910-Prospector-Ave-Park-City-UT/28072495/",
+    "photoUrl": "images/listings/ln-28072495.png",
+    "photos": ["images/listings/ln-28072495.png"],
+    "flyerUrl": null,
     "broker": "Steve Hooker",
     "brokerEmail": "shooker@acme-cre.com",
     "brokerPhone": "801-509-3560"
